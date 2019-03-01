@@ -115,14 +115,11 @@
     <Content Include="statics\js\slide.js" />
     <Content Include="statics\public\jquery.min.js" />
     <Content Include="templates\404.html" />
-    <Content Include="templates\banchengpin.html" />
     <Content Include="templates\BAPage.html" />
     <Content Include="templates\DetailModel.html" />
     <Content Include="templates\foot.html" />
     <Content Include="templates\head.html" />
     <Content Include="templates\MainPage.html" />
-    <Content Include="templates\map.html" />
-    <Content Include="templates\MoreProduct.html" />
     <Content Include="templates\navigation.html" />
     <Content Include="templates\Product.html" />
     <Content Include="templates\sitemap.html" />
@@ -158,6 +155,9 @@
     <Compile Include="SqlHelperCatalog.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="templates\company\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
