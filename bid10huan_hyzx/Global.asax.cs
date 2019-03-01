@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     public class Global : System.Web.HttpApplication
     {

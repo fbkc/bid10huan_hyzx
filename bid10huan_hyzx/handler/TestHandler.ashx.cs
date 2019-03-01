@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     /// <summary>
     /// TestHandler 的摘要说明

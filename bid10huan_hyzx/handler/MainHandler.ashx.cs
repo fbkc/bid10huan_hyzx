@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     /// <summary>
     /// MainHandler 的摘要说明

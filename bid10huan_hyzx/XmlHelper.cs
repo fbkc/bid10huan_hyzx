@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Xml;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     public class XmlHelper
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     /// <summary>
     /// BAHandler 的摘要说明

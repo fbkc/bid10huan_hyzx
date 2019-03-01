@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace xinxi
+namespace bid10huan_hyzx
 {
     public class BLL
     {
