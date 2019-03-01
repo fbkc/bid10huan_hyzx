@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>$data.htmlTitle</title>
+    <meta name="keywords" content="$data.keyword" />
+    <meta name="description" content="$data.description" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <link rel="icon" href="$data.hostUrl/statics/images/favicon.ico" />
+    <link rel="stylesheet" href="$data.hostUrl/statics/css/style11.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="$data.hostUrl/statics/css/kefu.css" />
+    <script type="text/javascript" src="$data.hostUrl/statics/js/skin/jquery.min.js"></script>
+    <script type="text/javascript" src="$data.hostUrl/statics/js/skin/gotop.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="logo"><a href="#"><img src="$data.hostUrl/statics/images/logo.jpg" title="" alt="" width="230" height="60" /></a></div>
+        <div class="search">
+            <!--<form action="#" name="formsearch">-->
+            <input type="hidden" name="kwtype" value="0" />
+            <input name="keyword" type="text" class="search-keyword fl" id="search-keyword" value="请输入关键词" onfocus="if(this.value=='请输入关键词'){this.value='';}" onblur="if(this.value==''){this.value='请输入关键词';}" />
+            <button type="submit" class="search-submit fl">搜 索</button>
+        </div>
+        <div class="login">
+            <a href="http://vip.100dh.cn/login" target="_blank">会员登录</a>
+        </div>
+    </div>
+    #parse("navigation.html")
+    <div class="ban_1001"></div>
+    <div class="weizhi">
+        您的当前位置：<a href='$data.hostUrl/'>主页</a> >
+        <a href='$data.hostUrl/list_${data.hInfo.columnId}.html'>$data.columnName</a> >
+        正文
+    </div>
+    <div class="main1">
+        <div class="left_1">
+            <div class="g_con">
+                <h1>$data.hInfo.title</h1>
+                <div class="info">
+                    <span>来源：网络</span>|
+                    <span>时间：$data.hInfo.addTime</span>
+                </div>
+                <div class="ban_708"></div>
+                <div class="con">$data.hInfo.articlecontent</div>
+                <div class="ban_708"></div>
+                <div class="b_box6">上一篇：<a href='$data.BPage.Href'>$data.BPage.Title</a> <br /></div>
+            </div>
+        </div>
+        <div class="right_1">
+            <script language=javascript src='http://tool.100dh.cn/rightPageHandler.ashx?uname=$data.hInfo.username'></script>
+            <div class="g_box2 u_2">
+                <div class="t_1">相关产品</div>
+                <ul class="b_box3 u_1">
+                    #foreach($h in $data.ProductFloat)
+                    <li><a href="$h.titleURL">$h.title</a></li>
+                    #end
+                </ul>
+            </div>
+            <div class="g_box2 u_2">
+                <div class="t_1">最新新闻</div>
+                <ul class="b_box3 u_1">
+                    #foreach($h in $data.NewsFloat)
+                    <li><a href="$h.titleURL">$h.title</a></li>
+                    #end
+                </ul>
+            </div>
+            <div class="ban_251"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    #parse("foot.html")
+</body>
+</html>

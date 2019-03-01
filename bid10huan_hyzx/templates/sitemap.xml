@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  #foreach($h in $data.hInfo)
+  <url>
+    <loc>$h.titleURL</loc>
+    <lastmod>$h.addTime</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+  #end
+</urlset>

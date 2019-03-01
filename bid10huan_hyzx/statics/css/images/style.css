@@ -1,0 +1,236 @@
+﻿table.hovertable {
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+
+    table.hovertable th {
+        background-color: #f1f1f1;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #eee;
+    }
+
+    table.hovertable tr {
+        background-color: #fff;
+    }
+
+    table.hovertable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #eee;
+    }
+
+.title1 span {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial Narrow", arial;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.title2 {
+    font-size: 16px;
+    color: #666;
+}
+
+    .title2 a {
+        display: block;
+        color: #3399ff;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+        .title2 a:hover {
+            color: #ff3300;
+            text-decoration: none;
+        }
+
+.laryer1 {
+    width: 100%;
+    height: 555px;
+    background: url(styleImages/yewubg.gif) repeat-x;
+}
+
+    .laryer1 .yewu, .rx_tuijian {
+        width: 1020px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .laryer1 .yewu h2, .rx_tuijian h2, .laryer3 h2 {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 34px;
+            color: #767676;
+        }
+
+        .laryer1 .yewu h3, .rx_tuijian h3, .laryer3 h3 {
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+            .laryer1 .yewu h3 b, .rx_tuijian h3 b {
+                font-weight: normal;
+                color: #fb6e53;
+            }
+
+        .laryer1 .yewu ul {
+            overflow: hidden;
+            margin-top: 40px;
+            height: auto;
+        }
+
+            .laryer1 .yewu ul li {
+                float: left;
+                display: inline;
+                width: 330px;
+                height: 400px;
+            }
+
+                .laryer1 .yewu ul li a {
+                    display: block;
+                    width: 330px;
+                    height: 385px;
+                    text-align: center;
+                }
+
+                    .laryer1 .yewu ul li a img {
+                        margin-top: 20px;
+                    }
+
+                    .laryer1 .yewu ul li a:hover {
+                        background: #FFF;
+                        border: 1px solid #fb6e53;
+                        border-radius: 5px;
+                    }
+
+                .laryer1 .yewu ul li h3 {
+                    font-size: 18px;
+                }
+
+                .laryer1 .yewu ul li .text {
+                    font-size: 14px;
+                    color: #959595;
+                    text-align: left;
+                    width: 250px;
+                    margin-top: 5px;
+                    margin-right: auto;
+                    margin-bottom: 0;
+                    margin-left: auto;
+                }
+
+.vps_tuijian {
+    width: 990px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+    .vps_tuijian h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+        .vps_tuijian h2 span {
+            display: block;
+            font-size: 12px;
+            font-family: Georgia;
+            text-align: center;
+            font-weight: normal;
+        }
+
+    .vps_tuijian ul li {
+        width: 235px;
+        height: 410px;
+        border: 1px solid #cecece;
+        float: left;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: inline;
+    }
+
+        .vps_tuijian ul li h2 {
+            height: 37px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+            line-height: 37px;
+            font-size: 16px;
+            margin: 0;
+            font-weight: normal;
+            font-weight: bold;
+        }
+
+        .vps_tuijian ul li .vps_jiage {
+            height: 80px;
+            border-bottom: 1px solid #dddddd;
+            line-height: 80px;
+            text-align: center;
+        }
+
+            .vps_tuijian ul li .vps_jiage span {
+                font-size: 48px;
+                color: #fb6e53;
+            }
+
+        .vps_tuijian ul li .textt {
+            padding: 15px 10px;
+            line-height: 24px;
+            color: #7e7e7e;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .vps_tuijian ul li .zhishu {
+            height: 48px;
+            line-height: 48px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #dddddd;
+            color: #fb6e53;
+            text-align: center;
+            _padding-top: 20px;
+            _height: 28px;
+        }
+
+            .vps_tuijian ul li .zhishu img {
+                margin-left: 5px;
+            }
+
+        .vps_tuijian ul li a.xuanzhe {
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+
+        .vps_tuijian ul li:hover {
+            border: 1px solid #fb6e53;
+        }
+
+            .vps_tuijian ul li:hover h2 {
+                background: #fb6e53;
+                color: #FFF;
+            }
+
+                .vps_tuijian ul li:hover h2 i {
+                    color: #FFF;
+                }
+
+.mr10n {
+    margin-top: 0;
+}
+
+.nav .sub li.bordern a {
+    border-bottom: none;
+}

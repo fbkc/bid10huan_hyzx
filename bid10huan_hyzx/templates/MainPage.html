@@ -1,0 +1,21 @@
+﻿#parse("head.html")
+#parse("navigation.html")
+<div class="mainpage">
+    <div class="mainpage_list">
+        <div class="t_10">产品信息</div>
+        <ul>
+            #foreach($p in $data.productTitle)
+            <li><a href="$p.titleURL" target="_blank" title="$p.title" class="in-huik-ti">$p.title</a>&nbsp;&nbsp;&nbsp;<span>【$p.addTime】</span></li>
+            #end
+        </ul>
+    </div>
+    <div class="mainpage_list">
+        <div class="t_10">最新资讯</div>
+        <ul>
+            #foreach($n in $data.newsTitle)
+            <li><a href="$n.titleURL" target="_blank" title="$n.title" class="in-huik-ti">$n.title</a>&nbsp;&nbsp;&nbsp;<span>【$n.addTime】</span></li>
+            #end
+        </ul>
+    </div>
+</div>
+#parse("foot.html")

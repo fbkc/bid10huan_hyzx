@@ -1,0 +1,7 @@
+﻿<div class="nav">
+    <ul>
+        #foreach($c in $data.columnsList)
+        <li><a href="$data.hostUrl/list_${c.Id}.html" title="$c.columnName">$c.columnName</a></li>
+        #end
+    </ul>
+</div>

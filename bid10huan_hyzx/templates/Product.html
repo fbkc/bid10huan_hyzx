@@ -1,0 +1,66 @@
+﻿#parse("head.html")
+#parse("navigation.html")
+<div class="ban_1001"></div>
+<div class="weizhi">
+    您的当前位置：<a href='$data.hostUrl/'>主页</a> >
+    <a href='$data.hostUrl/list_${data.cId}.html'>$data.columnName</a> >
+</div>
+<div class="main1">
+    <div class="left_1">
+        <div class="g_list">
+            <div class="t_4"><h3>$data.columnName</h3></div>
+            <ul class="list2">
+                #foreach($p in $data.productList)
+                <li>
+                    <a href="$p.titleURL"><img src="$p.titleImg" alt="$p.title" onerror="this.src='$data.hostUrl/statics/images/nopic.gif'" /></a>
+                    <h3><a href="$p.titleURL" title="$p.title">$p.title</a></h3>
+                    <p>$p.articlecontent</p>
+                    <span>$p.addTime</span>
+                </li>
+                #end
+            </ul>
+            <div class="dede_pages">
+                <ul class="pagelist">
+                    <li><a href="${data.hostUrl}/list_${data.cId}_1.html">首页</a></li>
+                    #if($data.pageIndex>1)
+                    #set($upPage=$data.pageIndex+(-1))
+                    <li><a href="${data.hostUrl}/list_${data.cId}_${upPage}.html" class="previous">上一页</a></li>
+                    #end
+
+                    #foreach($page in $data.pageData)
+                    #if($page.Title==$data.pageIndex)
+                    <li class="thisclass"><a href="javascript:void(0)">${page.Title}</a></li>
+                    #else
+                    <li><a href="${data.hostUrl}/${page.Href}.html">${page.Title}</a></li>
+                    #end
+                    #end
+                    #if($data.pageIndex<$data.pageCount) #set($nextPage=$data.pageIndex+1)
+                    <li><a href="$data.hostUrl/list_${data.cId}_${nextPage}.html" class="nextpage">下一页</a></li>
+                    #end
+                    <li><a href="$data.hostUrl/list_${data.cId}_${data.pageCount}.html">末页</a></li>
+                    <li><span class="pageinfo">共 <strong>$data.pageCount</strong>页<strong>$data.paraTotal</strong>条</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right_1">
+        <div class="g_box2 u_2">
+            <div class="t_1">最新新闻</div>
+            <ul class="b_box3 u_1">
+                #foreach($n in $data.newsList)
+                <li><a href="$n.titleURL" title="$n.title" target="_blank">$n.title</a></li>
+                #end
+            </ul>
+        </div>
+        <div class="g_box2 u_2">
+            <div class="t_1">最新产品</div>
+            <ul class="b_box1">
+                #foreach($n in $data.productListNocId)
+                <li><a href="$n.titleURL" title="$n.title" target="_blank">$n.title</a></li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+#parse("foot.html")

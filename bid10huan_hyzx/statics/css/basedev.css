@@ -1,0 +1,242 @@
+﻿/*鍏ㄥ眬*/
+
+/*body,ul,ol,li,dl,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,table{margin:0;padding:0}*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul, dl {
+    list-style: none
+}
+
+a {
+    outline: medium;
+    text-decoration: none;
+    color: #000
+}
+
+    a:hover {
+        color: #FF6600;
+    }
+
+img {
+    vertical-align: middle;
+    border: 0
+}
+
+input, textarea, select, button {
+    vertical-align: middle;
+}
+
+.w960 {
+    clear: both;
+    margin: auto;
+    width: 960px
+}
+
+.w9601 {
+    clear: both;
+    margin: auto;
+    width: 980px
+}
+
+.clear {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0px
+}
+
+/*甯哥敤鏍峰紡绠€鍐�*/
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.memberCenter {
+    float: right;
+}
+
+.hide {
+    display: none
+}
+
+.mtb10px {
+    margin: 10px 0;
+}
+
+.mt5px_ie6 {
+    _margin-top: 5px;
+}
+
+.mt6px_ie6 {
+    _margin-top: 6px;
+}
+
+.mt10px {
+    margin-top: 10px
+}
+
+.mb10px {
+    margin-bottom: 10px
+}
+
+.mr10px {
+    margin-right: 10px
+}
+
+/*瀛椾綋鏍峰紡*/
+.font12px {
+    font-size: 12px
+}
+
+.font14px {
+    font-size: 14px
+}
+
+.font16px {
+    font-size: 16px
+}
+
+.fontnormal {
+    font-weight: normal
+}
+
+/*澶撮儴*/
+#headerAll {
+    height: 108px;
+    min-width: 960px;
+    background: url("../images/header_bg.png") repeat-x scroll 0 -12px transparent;
+}
+
+.menu-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    line-height: 34px;
+    height: 34px;
+    color: #90bfff
+}
+
+    .menu-top a {
+        color: #333
+    }
+
+.header {
+    z-index: 9;
+    height: 74px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    height: 64px;
+    width: 300px;
+    margin-top: 8px;
+}
+
+    .logo a {
+        display: block;
+    }
+
+/*鍏徃鎻愮ず*/
+.companyinfo {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+    .companyinfo a {
+        font-size: 14px;
+        color: #F60
+    }
+
+#companyName {
+    margin-right: 10px;
+    padding: 0;
+}
+
+#companyTel {
+    padding: 0;
+}
+
+/*鑿滃崟*/
+.nav-box {
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FF6F3D;
+}
+
+    .nav-box a {
+        display: block;
+        padding: 0 35px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+        .nav-box a:hover {
+            color: #FFF;
+            background-color: #ED5F30;
+        }
+
+        .nav-box a.nav-select {
+            background-color: #ED5F30;
+        }
+
+.sub-nav {
+    height: 30px;
+    border-bottom: 2px solid #d7e7ff;
+    background-color: #e8f1ff
+}
+
+.sub-nav-box {
+    position: relative;
+    padding-left: 35px;
+    height: 30px;
+    line-height: 30px;
+}
+
+    .sub-nav-box a {
+        display: block;
+        margin: 0 20px;
+        height: 30px;
+        font-size: 14px;
+        color: #317ee7;
+    }
+
+        .sub-nav-box a:hover {
+            color: #317ee7;
+        }
+
+    .sub-nav-box .underline {
+        position: absolute;
+        top: 30px;
+        display: block;
+        height: 2px;
+        overflow: hidden;
+        background-color: #448ef3
+    }
+
+#wrapper {
+    min-width: 960px;
+    overflow: hidden;
+    background: url("../img/wrapper_bg.jpg") repeat-x scroll left top #FFFFFF;
+}
+
+.container {
+    z-index: 2;
+    margin-top: 3px;
+    min-height: 760px;
+}
+
+展开
+收起

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>站点地图</title>
+    <meta name="keywords" content="十环网咨询">
+    <meta name="description" content="十环网咨询">
+    <link rel="stylesheet" href="/hyzx/statics/css/reset.css">
+    <link rel="stylesheet" href="/hyzx/statics/css/main.css">
+    <link href="/hyzx/statics/css/basedev.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <style type="text/css">
+        .w1 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .po_dh a, .po_dh a:hover {
+            color: #666
+        }
+
+        .leftdiv {
+            width: 1200px;
+            border-right: 1px solid #d7d7d7;
+            padding-right: 20px;
+            margin-top: 30px;
+        }
+
+        .leftdiv1 {
+            width: 900px;
+            border-right: 1px solid #d7d7d7;
+            margin-top: 30px;
+        }
+
+        .leftcontent1 {
+            padding: 0 30px 40px 30px;
+            min-height: 750px;
+            font-size: 14px;
+            line-height: 40px;
+        }
+
+        .classnews {
+            text-align: left;
+        }
+
+            .classnews li {
+                list-style: none;
+                font-size: 14px;
+                height: 45px;
+            }
+
+        .rightdiv {
+            width: 280px;
+            margin: 20px 0 0 0
+        }
+
+        .titdiv3 {
+            height: 80px;
+            line-height: 80px;
+            position: relative;
+            border-bottom: 1px solid #d7d7d7;
+            border-top: 1px solid #d7d7d7;
+            background: #fafafa;
+            margin: 0px 0 10px 0;
+            padding: 0 20px 0 0;
+        }
+
+            .titdiv3 h3 {
+                font-family: Microsoft yahei;
+                font-weight: normal;
+                font-size: 30px;
+                border-bottom: 3px solid #379cee;
+                position: absolute;
+                bottom: -1px;
+                padding: 0 20px
+            }
+
+        .indextit1 {
+            font-family: Microsoft yahei;
+            font-size: 18px;
+            color: #323232;
+            margin-bottom: 10px;
+            position: relative;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .indextit3 {
+            border-radius: 5px 0 0 5px;
+            -webkit-border-radius: 5px 0 0 5px;
+            line-height: 60px;
+            height: 60px;
+            background: #ff6400;
+            color: #fff;
+            text-indent: 20px;
+        }
+
+        .navtreefirst li {
+            line-height: 50px;
+            font-size: 14px;
+        }
+    </style>
+    <div class="w1">
+        <div class="titdiv3"><div class="fr po_dh"> <a href="$data.hostUrl">首页</a> &gt; <a href="sitemap.html">站点地图</a> </div><h3>站点地图</h3><div class="clear"></div></div> <div class="leftdiv1 fl">
+            <div class="leftcontent1">
+                <ul class="classnews">
+                    #foreach($c in $data.hInfo)
+                    <li><a href="$c.titleURL" target="_blank" title="$c.title">$c.title</a></li>
+                    #end
+                </ul>
+            </div>
+        </div>
+        <div class="rightdiv fr">
+            <div class="rightxinxi">
+                <h3 class="indextit1 indextit3">行业分类</h3>
+                <ul class="navtreefirst">
+                    #foreach($c in $data.columnsList)
+                    <li><a href="$data.hostUrl/list_${c.Id}.html" title="$c.columnName">$c.columnName</a></li>
+                    #end
+                </ul>
+            </div>
+        </div> <div class="clear"></div>
+    </div> <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr> <td><hr size="1" color="#e0e0e0"></td> </tr>
+            <tr>
+                <footer>
+                    <script type="text/javascript" src="/statics/js/baidujs.js"></script>
+                </footer>
+        </tbody>
+    </table> </script>
+</body>
+</html>
