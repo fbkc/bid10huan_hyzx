@@ -189,7 +189,6 @@ namespace bid10huan_hyzx
                     hostName,
                     columnName = bll.GetColumns(" where Id=" + columnId)[0].columnName,
                     columnsList = bll.GetColumns(""),//导航
-                    pList,
                     BAPage,
                     ProductFloat = bll.GetProFloat(hInfo.userId, "22"),//右侧浮动10条产品
                     NewsFloat = bll.GetNewsFloat(hInfo.userId, "22")//右侧浮动10条新闻
