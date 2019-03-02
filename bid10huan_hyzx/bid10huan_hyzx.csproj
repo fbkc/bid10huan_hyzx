@@ -83,7 +83,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DetailPage.html" />
     <Content Include="Global.asax" />
     <Content Include="Newtonsoft.Json.dll" />
     <Content Include="NVelocity.dll" />

@@ -15,16 +15,13 @@
 </head>
 <body>
     <div class="head">
-        <div class="logo"><a href="#"><img src="$data.hostUrl/statics/images/logo.jpg" title="" alt="" width="230" height="60" /></a></div>
+        <div class="logo"><a href="#"><img src="$data.hostUrl/statics/images/logo.jpg" title="$data.hostName" alt="$data.hostName" width="230" height="60" /></a></div>
         <div class="search">
             <!--<form action="#" name="formsearch">-->
             <input type="hidden" name="kwtype" value="0" />
             <input name="keyword" type="text" class="search-keyword fl" id="search-keyword" value="请输入关键词" onfocus="if(this.value=='请输入关键词'){this.value='';}" onblur="if(this.value==''){this.value='请输入关键词';}" />
             <button type="submit" class="search-submit fl">搜 索</button>
         </div>
-        <!--<div class="login">
-            <a href="http://vip.100dh.cn/login" target="_blank">会员登录</a>
-        </div>-->
     </div>
     #parse("navigation.html")
     <div class="ban_1001"></div>
@@ -44,12 +41,8 @@
                 <div class="ban_708"></div>
                 <div class="con">$data.hInfo.articlecontent</div>
                 <div class="ban_708"></div>
-                #foreach($p in $data.pList)
-                #if($p.Sort==-1)
-                <div class="b_box6">上一篇：<a href='$p.titleURL'>$p.Title</a> <br /></div>
-                #else if($p.Sort==1)
-                <div class="b_box6">下一篇：<a href='$p.titleURL'>$p.Title</a> <br /></div>
-                #end
+                #foreach($p in $data.BAPage)
+                <div class='b_box6'>$p</div>
                 #end
             </div>
         </div>

@@ -50,7 +50,6 @@ namespace bid10huan_hyzx
         /// <returns></returns>
         public string ModuleHtml(HttpContext context)
         {
-            //需要做一个时间，每隔多长时间才允许访问一次
             string username = context.Request["username"];
             if (string.IsNullOrEmpty(username))
                 return json.WriteJson(0, "用户名不能为空", new { });
@@ -117,29 +116,29 @@ namespace bid10huan_hyzx
                 //调用tool接口，更新userInfo已发条数等信息
                 NetHelper.HttpGet("http://tool.100dh.cn/UserHandler.ashx?action=UpUserPubInformation&userId=" + userInfo.Id, "", Encoding.UTF8);//公共接口，调用user信息
 
-                string keyword = "";//关键词
-                string description = "";//描述
-                if (hInfo.title.Length > 6)
-                    keyword = hInfo.title + "," + hInfo.title.Substring(0, 2) + "," + hInfo.title.Substring(2, 2) + "," + hInfo.title.Substring(4, 2);
-                else
-                    keyword = hInfo.title;
-                description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80);//产品简介
-                List<htmlPara> pList = bll.GetHtmlBAPage(cid, htmlId.ToString());//上一篇，下一篇
-                var data = new
-                {
-                    htmlTitle = hInfo.title + "_" + hInfo.companyName,
-                    hInfo,
-                    keyword,
-                    description,
-                    hostUrl,
-                    columnName = bll.GetColumns(" where Id=" + cid)[0].columnName,
-                    columnsList = bll.GetColumns(""),//导航
-                    BPage = new { Href = pList[0].titleURL, Title = pList[0].title },//上一篇
-                    ProductFloat = bll.GetProFloat(hInfo.userId,"22"),//右侧浮动10条产品
-                    NewsFloat = bll.GetNewsFloat(hInfo.userId,"22")//右侧浮动10条新闻
-                };
-                string html = SqlHelperCatalog.WriteTemplate(data, "DetailModel.html");
-                WriteFile(html, showName, username);//写模板
+                //string keyword = "";//关键词
+                //string description = "";//描述
+                //if (hInfo.title.Length > 6)
+                //    keyword = hInfo.title + "," + hInfo.title.Substring(0, 2) + "," + hInfo.title.Substring(2, 2) + "," + hInfo.title.Substring(4, 2);
+                //else
+                //    keyword = hInfo.title;
+                //description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80);//产品简介
+                //List<htmlPara> pList = bll.GetHtmlBAPage(cid, htmlId.ToString());//上一篇，下一篇
+                //var data = new
+                //{
+                //    htmlTitle = hInfo.title + "_" + hInfo.companyName,
+                //    hInfo,
+                //    keyword,
+                //    description,
+                //    hostUrl,
+                //    columnName = bll.GetColumns(" where Id=" + cid)[0].columnName,
+                //    columnsList = bll.GetColumns(""),//导航
+                //    BPage = new { Href = pList[0].titleURL, Title = pList[0].title },//上一篇
+                //    ProductFloat = bll.GetProFloat(hInfo.userId,"22"),//右侧浮动10条产品
+                //    NewsFloat = bll.GetNewsFloat(hInfo.userId,"22")//右侧浮动10条新闻
+                //};
+                //string html = SqlHelperCatalog.WriteTemplate(data, "DetailModel.html");
+                //WriteFile(html, showName, username);//写模板
             }
             catch (Exception ex)
             {

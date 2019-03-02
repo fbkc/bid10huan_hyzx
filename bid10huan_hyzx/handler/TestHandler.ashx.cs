@@ -18,7 +18,7 @@ namespace bid10huan_hyzx
     /// </summary>
     public class TestHandler : IHttpHandler
     {
-        private string hostName = "赢商云";
+        private string hostName = "十环咨询";
         private string hostUrl = "http://bid.10huan.com/hyzx";
         public void ProcessRequest(HttpContext context)
         {
@@ -170,19 +170,27 @@ namespace bid10huan_hyzx
                 else
                     keyword = hInfo.title;
                 description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80);//产品简介
+                List<string> BAPage = new List<string>();
                 List<htmlPara> pList = bll.GetHtmlBAPage(columnId, Id);//上一篇，下一篇
+                if (pList.Count == 1)
+                    BAPage.Add("上一篇：<a href = '" + pList[0].titleURL + "' >" + pList[0].title + "</a> <br />");//上一篇
+                if (pList.Count == 2)
+                {
+                    BAPage.Add("上一篇：<a href = '" + pList[0].titleURL + "' >" + pList[0].title + "</a> <br />");
+                    BAPage.Add("下一篇：<a href = '" + pList[1].titleURL + "' >" + pList[1].title + "</a> <br />");//下一篇
+                }
                 var data = new
                 {
                     htmlTitle = hInfo.title + "_" + hInfo.companyName,
                     hInfo,
                     keyword,
-                    description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80),//产品简介
+                    description,
                     hostUrl,
+                    hostName,
                     columnName = bll.GetColumns(" where Id=" + columnId)[0].columnName,
                     columnsList = bll.GetColumns(""),//导航
                     pList,
-                    //BPage = new { Href = pList[0].titleURL, Title = pList[0].title },//上一篇
-                    //APage = new { Href = pList[1].titleURL, Title = pList[1].title },//下一篇
+                    BAPage,
                     ProductFloat = bll.GetProFloat(hInfo.userId, "22"),//右侧浮动10条产品
                     NewsFloat = bll.GetNewsFloat(hInfo.userId, "22")//右侧浮动10条新闻
                 };
