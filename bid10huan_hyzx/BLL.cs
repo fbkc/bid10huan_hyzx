@@ -350,7 +350,7 @@ where RANK2<=10").Tables[0];
         public List<columnInfo> GetColumns(string sqlstr)
         {
             List<columnInfo> cList = new List<columnInfo>();
-            DataTable dt = SqlHelperCatalog.ExecuteDataTable("select * from columnInfo " + sqlstr);
+            DataTable dt = SqlHelperCatalog.ExecuteDataTable("select Id,columnName from columnInfo " + sqlstr);
             if (dt.Rows.Count < 1)
                 return null;
             foreach (DataRow row in dt.Rows)

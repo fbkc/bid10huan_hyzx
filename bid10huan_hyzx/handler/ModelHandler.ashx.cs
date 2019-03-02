@@ -41,6 +41,8 @@ namespace bid10huan_hyzx
             }
             context.Response.Write(_strContent.ToString());
         }
+
+        #region 发布系统调用的post接口
         /// <summary>
         /// 发布系统调用的post接口
         /// </summary>
@@ -72,7 +74,7 @@ namespace bid10huan_hyzx
                 return json.WriteJson(0, "今日投稿已超过限制数！", new { });
             //判断所有条数是否发完
             if (!(userInfo.canPubCount > userInfo.endPubCount))
-                return json.WriteJson(0, "信息条数已发完！", new { });
+                return json.WriteJson(0, "会员套餐信息条数已发完！", new { });
             string url = "";
             try
             {
@@ -145,7 +147,9 @@ namespace bid10huan_hyzx
             }
             return json.WriteJson(1, "发布成功", new { url, username });
         }
+        #endregion
 
+        #region 写模板
         /// <summary>
         /// 写模板
         /// </summary>
@@ -172,6 +176,8 @@ namespace bid10huan_hyzx
             }
             return true;
         }
+        #endregion
+
         public bool IsReusable
         {
             get
