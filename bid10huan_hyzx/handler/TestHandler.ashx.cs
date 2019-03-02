@@ -62,8 +62,8 @@ namespace bid10huan_hyzx
                 hostName,
                 hostUrl,
                 columnsList = bll.GetColumns(""),//导航
-                productTitle = bll.GetHtmlList("50", "20"),//最新产品，无分类
-                newsTitle = bll.GetHtmlList("20", 1, 50)//最新新闻 
+                productTitle = bll.GetHtmlList("50", "22"),//最新产品，无分类
+                newsTitle = bll.GetHtmlList("22", 1, 50)//最新新闻 
             };
             return SqlHelperCatalog.WriteTemplate(data, "MainPage.html");
         }
