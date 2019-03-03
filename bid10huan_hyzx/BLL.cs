@@ -67,7 +67,7 @@ namespace bid10huan_hyzx
             hPara.companyName = (string)SqlHelper.FromDBNull(row["companyName"]);//公司名字
             hPara.ten_qq = (string)SqlHelper.FromDBNull(row["ten_qq"]);
             hPara.com_web = (string)SqlHelper.FromDBNull(row["com_web"]);//网址
-            hPara.addTime = ((DateTime)SqlHelper.FromDBNull(row["addTime"])).ToString("yyyy-MM-dd");
+            hPara.addTime = ((DateTime)SqlHelper.FromDBNull(row["addTime"])).ToString("yyyy-MM-dd HH:mm:ss");
             hPara.columnName = (string)SqlHelper.FromDBNull(row["columnName"]);//栏目名
             hPara.username = (string)SqlHelper.FromDBNull(row["username"]);//用户名
             return hPara;
