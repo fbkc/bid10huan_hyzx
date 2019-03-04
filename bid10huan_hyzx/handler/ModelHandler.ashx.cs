@@ -109,6 +109,7 @@ namespace bid10huan_hyzx
                 hInfo.username = username;
                 //公司 / 会员信息
                 //cmUserInfo uInfo = bll.GetUser(string.Format("where username='{0}'", username));
+                hInfo.ten_qq = userInfo.ten_qq;
                 hInfo.companyName = userInfo.companyName;
                 hInfo.com_web = userInfo.com_web;
                 //hInfo.realmNameId = "1";//发到哪个站

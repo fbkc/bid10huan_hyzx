@@ -274,6 +274,9 @@ where RANK2<=10").Tables[0];
            ,[city]
            ,[titleImg]
            ,[addTime]
+           ,[ten_qq]
+           ,[companyName]
+           ,[com_web]
            ,[userId]
            ,[userName])
      VALUES
@@ -290,6 +293,9 @@ where RANK2<=10").Tables[0];
            ,@city
            ,@titleImg
            ,@addTime
+           ,@ten_qq
+           ,@companyName
+           ,@com_web
            ,@userId
            ,@userName)",
                new SqlParameter("@title", SqlHelper.ToDBNull(info.title)),
@@ -305,6 +311,9 @@ where RANK2<=10").Tables[0];
                new SqlParameter("@city", SqlHelper.ToDBNull(info.city)),
                new SqlParameter("@titleImg", SqlHelper.ToDBNull(info.titleImg)),
                new SqlParameter("@addTime", SqlHelper.ToDBNull(info.addTime)),
+               new SqlParameter("@ten_qq", SqlHelper.ToDBNull(info.ten_qq)),
+               new SqlParameter("@companyName", SqlHelper.ToDBNull(info.companyName)),
+               new SqlParameter("@com_web", SqlHelper.ToDBNull(info.com_web)),
                new SqlParameter("@userId", SqlHelper.ToDBNull(info.userId)),
                new SqlParameter("@userName", SqlHelper.ToDBNull(info.username)));
         }
