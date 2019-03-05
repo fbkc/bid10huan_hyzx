@@ -103,14 +103,14 @@ namespace bid10huan_hyzx
                         maxIndex = pageCount;
                     for (int i = pageIndex - 5; i < maxIndex; i++)
                     {
-                        pageData.Add(new { Href = "list_" + cId + "_" + (i + 1), Title = i + 1 });
+                        pageData.Add(new { Href = "list-" + cId + "-" + (i + 1), Title = i + 1 });
                     }
                 }
                 else
                 {
                     for (int i = 0; i < 9; i++)
                     {
-                        pageData.Add(new { Href = "list_" + cId + "_" + (i + 1), Title = i + 1 });
+                        pageData.Add(new { Href = "list-" + cId + "-" + (i + 1), Title = i + 1 });
                     }
                 }
             }
@@ -118,7 +118,7 @@ namespace bid10huan_hyzx
             {
                 for (int i = 0; i < pageCount; i++)
                 {
-                    pageData.Add(new { Href = "list_" + cId + "_" + (i + 1), Title = i + 1 });
+                    pageData.Add(new { Href = "list-" + cId + "-" + (i + 1), Title = i + 1 });
                 }
             }
             string columnName = "";
