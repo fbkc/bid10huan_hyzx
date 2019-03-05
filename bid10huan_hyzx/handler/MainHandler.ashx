@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="MainHandler.ashx.cs" Class="xinxi.MainHandler" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="MainHandler.ashx.cs" Class="bid10huan_hyzx.MainHandler" %>

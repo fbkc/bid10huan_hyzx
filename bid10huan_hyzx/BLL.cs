@@ -56,7 +56,7 @@ namespace bid10huan_hyzx
             hPara.columnId = (string)SqlHelper.FromDBNull(row["columnId"]);//栏目Id
             string content = (string)SqlHelper.FromDBNull(row["articlecontent"]);
             //hPara.articlecontent = ReplaceHtmlTag(content, 60);//产品简介
-            hPara.articlecontent = content.Replace("\r\n", "").Replace("&", "%26").Replace("<br/>", "").Replace("&nbsp;", "").Replace("\r", "").Replace("\n", "");
+            hPara.articlecontent = content.Replace("\r\n", "").Replace("<br/>", "").Replace("&nbsp;", "").Replace("\r", "").Replace("\n", "");
             hPara.city = (string)SqlHelper.FromDBNull(row["city"]);//生产城市
             hPara.smallCount = (string)SqlHelper.FromDBNull(row["smallCount"]);//起订
             hPara.xinghao = (string)SqlHelper.FromDBNull(row["xinghao"]);//型号

@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="TestHandler.ashx.cs" Class="xinxi.TestHandler" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="TestHandler.ashx.cs" Class="bid10huan_hyzx.TestHandler" %>
