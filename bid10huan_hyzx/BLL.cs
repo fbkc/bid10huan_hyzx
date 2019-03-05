@@ -281,7 +281,7 @@ where RANK2<=10").Tables[0];
            ,[userName])
      VALUES
            (@title
-           ,@titleURL
+           ,@titleURL+CONVERT(varchar(10), IDENT_CURRENT('htmlPara'))+'.html'
            ,@articlecontent
            ,@columnId
            ,@pinpai
@@ -316,6 +316,17 @@ where RANK2<=10").Tables[0];
                new SqlParameter("@com_web", SqlHelper.ToDBNull(info.com_web)),
                new SqlParameter("@userId", SqlHelper.ToDBNull(info.userId)),
                new SqlParameter("@userName", SqlHelper.ToDBNull(info.username)));
+        }
+        /// <summary>
+        /// 标题存储成功后返回titleUrl
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public string GetTitleUrl(string userId)
+        {
+            object tUrl = SqlHelperCatalog.ExecuteScalar("select top 1 titleURL from htmlPara where userId=@userId order by Id desc",
+                new SqlParameter("@userId", SqlHelper.ToDBNull(userId)));
+            return tUrl.ToString();
         }
 
         /// <summary>

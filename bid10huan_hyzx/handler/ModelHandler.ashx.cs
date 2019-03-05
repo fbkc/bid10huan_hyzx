@@ -59,7 +59,7 @@ namespace bid10huan_hyzx
             if (key != keyValue)
                 return json.WriteJson(0, "key值错误", new { });
             //根据username调用tool接口获取userInfo
-            string strjson = NetHelper.HttpGet("http://tool.100dh.cn/UserHandler.ashx?action=GetUserByUsername&username="+username,"",Encoding.UTF8);//公共接口，调用user信息
+            string strjson = NetHelper.HttpGet("http://tool.100dh.cn/UserHandler.ashx?action=GetUserByUsername&username=" + username, "", Encoding.UTF8);//公共接口，调用user信息
             JObject jo = (JObject)JsonConvert.DeserializeObject(strjson);
             cmUserInfo userInfo = JsonConvert.DeserializeObject<cmUserInfo>(jo["detail"]["cmUser"].ToString());
             //时间间隔必须大于60秒
@@ -69,7 +69,7 @@ namespace bid10huan_hyzx
             if (d3.TotalSeconds < 10)
                 return json.WriteJson(0, "信息发布过快，请隔60秒再提交！", new { });
             //判断今日条数是否达到1000条
-            if(userInfo.endTodayPubCount>999)
+            if (userInfo.endTodayPubCount > 999)
                 return json.WriteJson(0, "今日投稿已超过限制数！", new { });
             //判断所有条数是否发完
             if (!(userInfo.canPubCount > userInfo.endPubCount))
@@ -90,13 +90,7 @@ namespace bid10huan_hyzx
                 hInfo.articlecontent = content;
                 //hInfo.articlecontent = HttpUtility.UrlDecode(jo["content"].ToString(), Encoding.UTF8);//内容,UrlDecode解码
                 //命名规则：ip/目录/用户名/show_行业id+(五位数id)
-                long htmlId = (bll.GetMaxId() + 1);
-                hInfo.Id = htmlId;
-                string showName = "ashow-" + cid + "-" + htmlId + ".html";
-                url = hostUrl + "/" + username + "/" + showName;
-                hInfo.titleURL = url;
-                //hInfo.titleURL = string.Format("handler/TestHandler.ashx?action=DetailPage&cId={0}&Id={1}", cid, htmlId);
-                //url = host + hInfo.titleURL;
+                hInfo.titleURL = hostUrl + "/" + username + "/ashow-" + cid + "-";
                 hInfo.pinpai = context.Request["pinpai"];
                 hInfo.xinghao = context.Request["xinghao"];
                 hInfo.price = context.Request["price"];
@@ -107,13 +101,12 @@ namespace bid10huan_hyzx
                 hInfo.titleImg = context.Request["thumb"];
                 hInfo.addTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 hInfo.username = username;
-                //公司 / 会员信息
-                //cmUserInfo uInfo = bll.GetUser(string.Format("where username='{0}'", username));
                 hInfo.ten_qq = userInfo.ten_qq;
                 hInfo.companyName = userInfo.companyName;
                 hInfo.com_web = userInfo.com_web;
                 //hInfo.realmNameId = "1";//发到哪个站
                 bll.AddHtml(hInfo);//存入数据库
+                url = bll.GetTitleUrl(userInfo.Id.ToString());
                 //调用tool接口，更新userInfo已发条数等信息
                 NetHelper.HttpGet("http://tool.100dh.cn/UserHandler.ashx?action=UpUserPubInformation&userId=" + userInfo.Id, "", Encoding.UTF8);//公共接口，调用user信息
             }
