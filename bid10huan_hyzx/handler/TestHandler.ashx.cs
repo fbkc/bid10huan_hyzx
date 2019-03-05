@@ -169,7 +169,8 @@ namespace bid10huan_hyzx
                     keyword = hInfo.title + "," + hInfo.title.Substring(0, 2) + "," + hInfo.title.Substring(2, 2) + "," + hInfo.title.Substring(4, 2);
                 else
                     keyword = hInfo.title;
-                description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80);//产品简介
+                description = BLL.ReplaceHtmlTag(hInfo.articlecontent, 80)
+                     .Replace("\r\n", "").Replace("&", "%26").Replace("<br/>", "").Replace("&nbsp;", "").Replace("\r", "").Replace("\n", "") + "...";//产品简介;//产品简介
                 #region 上一篇，下一篇
                 List<string> BAPage = new List<string>();
                 List<htmlPara> pList = bll.GetHtmlBAPage(columnId, Id);//上一篇，下一篇
