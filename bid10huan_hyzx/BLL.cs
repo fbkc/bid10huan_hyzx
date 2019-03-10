@@ -18,7 +18,7 @@ namespace bid10huan_hyzx
         public List<htmlPara> GetXML()
         {
             List<htmlPara> hParaList = new List<htmlPara>();
-            DataTable dt = SqlHelperCatalog.ExecuteDataTable("select top 3000 Id, title,titleURL,addTime from htmlPara order by Id desc");
+            DataTable dt = SqlHelperCatalog.ExecuteDataTable("select top 1000 Id, title,titleURL,addTime from htmlPara order by Id desc");
             if (dt.Rows.Count < 1)
                 return null;
             foreach (DataRow row in dt.Rows)
