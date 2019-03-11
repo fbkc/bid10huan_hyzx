@@ -280,6 +280,8 @@ body {
 }
 
 .right_1 {
+    position:sticky;
+    top:0px;
     float: right;
     width: 30%;
     overflow: hidden;

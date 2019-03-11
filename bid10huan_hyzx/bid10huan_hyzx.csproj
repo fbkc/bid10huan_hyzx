@@ -91,7 +91,6 @@
     <Content Include="statics\css\images\common.css" />
     <Content Include="statics\css\images\style.css" />
     <Content Include="statics\css\images\type.css" />
-    <Content Include="statics\css\kefu.css" />
     <Content Include="statics\css\main.css" />
     <Content Include="statics\css\reset.css" />
     <Content Include="statics\css\skin\style.css" />
@@ -155,9 +154,7 @@
     <Compile Include="Tools.cs" />
     <Compile Include="XmlHelper.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="templates\company\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
