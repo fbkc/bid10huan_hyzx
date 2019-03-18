@@ -18,7 +18,7 @@ namespace bid10huan_hyzx
     public class ModelHandler : IHttpHandler
     {
         private BLL bll = new BLL();
-        private string hostUrl = "http://bid.10huan.com/hyzx";
+        private string hostUrl = "http://bid.10huan.com/qiye";
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";

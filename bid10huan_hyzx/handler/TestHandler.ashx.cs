@@ -19,7 +19,7 @@ namespace bid10huan_hyzx
     public class TestHandler : IHttpHandler
     {
         private string hostName = "十环咨询";
-        private string hostUrl = "http://bid.10huan.com/hyzx";
+        private string hostUrl = "http://bid.10huan.com/qiye";
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
